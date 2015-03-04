@@ -18,21 +18,28 @@ module.exports = (name, username, password) ->
     username: username
     password: password
 
-  github.repos.create
-    name: name
-  , (err, res) ->
-    if err
-      console.log "Error creating repository: #{errorToMessage err}"
+  github.repos.get
+    user: username
+    repo: name
+  , (err,res) ->
+    if res
+      console.log "ERROR: Repository #{name} already exists. Pick a different reponame"
     else
-      github.repos.createFile
-        user: username
-        repo: name
-        branch: if isMainGithubIo() then 'master' else 'gh-pages'
-        path: 'index.html'
-        message: 'Add index.html'
-        content: toBase64 content
+      github.repos.create
+        name: name
       , (err, res) ->
-          if err
-            console.log "Error creating file: #{errorToMessage err}"
-          else
-            console.log "Repository created. Go to #{repoUrl()}"
+        if err
+          console.log "ERROR: Error creating repository: #{errorToMessage err}"
+        else
+          github.repos.createFile
+            user: username
+            repo: name
+            branch: if isMainGithubIo() then 'master' else 'gh-pages'
+            path: 'index.html'
+            message: 'Add index.html'
+            content: toBase64 content
+          , (err, res) ->
+              if err
+                console.log "ERROR: Error creating file: #{errorToMessage err}"
+              else
+                console.log "INFO: Repository created. Go to #{repoUrl()}"

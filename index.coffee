@@ -5,7 +5,7 @@ app = require './gh-deploy'
 
 cli = meow
   help: ['Usage:',
-          'cli.coffee <name> <username> <password>',
+          'cli.coffee <reponame> <username> <password>',
           ''
         ].join '\n'
 
