@@ -10,12 +10,11 @@ A small library to deploy static pages to GitHub
 ## Usage
 
 ```
-gh-deploy reponame username password
+gh-deploy reponame username
 ```
 
 * **reponame** - name of the github repository. Defines the page URL
 * **username** - GitHub username
-* **password** - GitHub password
 
 ### Page URL
 

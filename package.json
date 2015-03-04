@@ -18,7 +18,8 @@
   },
   "dependencies": {
     "github": "^0.2.3",
-    "meow": "^3.1.0"
+    "meow": "^3.1.0",
+    "read": "^1.0.5"
   },
   "preferGlobal": true,
   "engines": {
