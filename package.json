@@ -1,0 +1,25 @@
+{
+  "name": "gh-deploy",
+  "version": "1.0.0",
+  "description": "Awesome module",
+  "homepage": "https://github.com/danielsiwiec/gh-deploy",
+  "bugs": "https://github.com/danielsiwiec/gh-deploy/issues",
+  "author": {
+    "name": "Dan Siwiec",
+    "email": "daniel.siwiec@gmail.com",
+    "url": "https://github.com/danielsiwiec"
+  },
+  "main": "./gh-deploy.coffee",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danielsiwiec/gh-deploy.git"
+  },
+  "dependencies": {
+    "github": "^0.2.3"
+  },
+  "engines": {
+    "node": ">=0.10.0",
+    "npm": ">=1.2.10"
+  },
+  "license": "MIT"
+}
