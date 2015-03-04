@@ -9,17 +9,18 @@
     "email": "daniel.siwiec@gmail.com",
     "url": "https://danielsiwiec.github.io"
   },
-  "main": "index.coffee",
   "bin": {
     "gh-deploy": "index.coffee"
-  }
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/danielsiwiec/gh-deploy.git"
   },
   "dependencies": {
-    "github": "^0.2.3"
+    "github": "^0.2.3",
+    "meow": "^3.1.0"
   },
+  "preferGlobal": true,
   "engines": {
     "node": ">=0.10.0",
     "npm": ">=1.2.10"
