@@ -10,6 +10,8 @@ module.exports = (name, username, password) ->
 
   toBase64 = (string) -> (new Buffer string).toString 'base64'
   errorToMessage = (error) -> JSON.parse(error.message).message
+  isMainGithubIo = -> return name is "#{username}.github.io"
+  repoUrl = -> "http://#{username}.github.io/#{if isMainGithubIo() then '' else name}"
 
   github.authenticate
     type: 'basic'
@@ -25,7 +27,7 @@ module.exports = (name, username, password) ->
       github.repos.createFile
         user: username
         repo: name
-        branch: 'gh-pages'
+        branch: if isMainGithubIo() then 'master' else 'gh-pages'
         path: 'index.html'
         message: 'Add index.html'
         content: toBase64 content
@@ -33,4 +35,4 @@ module.exports = (name, username, password) ->
           if err
             console.log "Error creating file: #{errorToMessage err}"
           else
-            console.log "Repository created. Go to http://#{username}.github.io/#{name}"
+            console.log "Repository created. Go to #{repoUrl()}"
