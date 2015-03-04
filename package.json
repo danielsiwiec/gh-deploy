@@ -1,7 +1,7 @@
 {
   "name": "gh-deploy",
   "version": "1.0.0",
-  "description": "Awesome module",
+  "description": "Gh-deploy",
   "homepage": "https://github.com/danielsiwiec/gh-deploy",
   "bugs": "https://github.com/danielsiwiec/gh-deploy/issues",
   "author": {
