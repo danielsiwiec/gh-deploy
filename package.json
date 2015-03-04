@@ -1,15 +1,15 @@
 {
   "name": "gh-deploy",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Gh-deploy",
   "homepage": "https://github.com/danielsiwiec/gh-deploy",
   "bugs": "https://github.com/danielsiwiec/gh-deploy/issues",
   "author": {
     "name": "Dan Siwiec",
     "email": "daniel.siwiec@gmail.com",
-    "url": "https://github.com/danielsiwiec"
+    "url": "https://danielsiwiec.github.io"
   },
-  "main": "./gh-deploy.coffee",
+  "main": "index.coffee",
   "repository": {
     "type": "git",
     "url": "https://github.com/danielsiwiec/gh-deploy.git"
