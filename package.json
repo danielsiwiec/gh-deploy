@@ -10,6 +10,9 @@
     "url": "https://danielsiwiec.github.io"
   },
   "main": "index.coffee",
+  "bin": {
+    "gh-deploy": "index.coffee"
+  }
   "repository": {
     "type": "git",
     "url": "https://github.com/danielsiwiec/gh-deploy.git"

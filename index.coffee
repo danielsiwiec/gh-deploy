@@ -1,3 +1,5 @@
+#!/usr/bin/env coffee
+
 meow = require 'meow'
 app = require './gh-deploy'
 
