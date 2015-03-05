@@ -7,6 +7,7 @@ This module will:
 * Create a new repo, following GitHub Pages convention
 * Add a stub index.html
 * Clone the repo into the current folder
+* Open the GitHub page in the browser, once the page is ready
 
 As a result you will:
 
@@ -26,11 +27,15 @@ As a result you will:
 ## Usage
 
 ```
-gh-deploy reponame username
+gh-deploy
 ```
 
-* **reponame** - name of the github repository. Defines the page URL
-* **username** - GitHub username
+The wizard asks about the following items:
+
+* **GitHub username**
+* **GitHub password**
+* **Page name** - name of the github repository. This defines the page URL
+
 
 ### Page URL
 

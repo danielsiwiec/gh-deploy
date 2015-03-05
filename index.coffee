@@ -20,7 +20,7 @@ read
     edit: true
   , (err, password) ->
     read
-      prompt: 'Page name:'
+      prompt: 'Page name (defines page URL):'
       default: "#{username}.github.io"
     , (err, pageName) ->
       app pageName, username, password
