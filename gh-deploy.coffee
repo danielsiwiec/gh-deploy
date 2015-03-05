@@ -13,7 +13,7 @@ module.exports = (name, username, password) ->
   toBase64 = (string) -> (new Buffer string).toString 'base64'
   errorToMessage = (error) -> JSON.parse(error.message).message
   isMainGithubIo = -> return name is "#{username}.github.io"
-  repoUrl = -> "http://#{username}.github.io/#{if isMainGithubIo() then '' else name}"
+  repoUrl = -> "https://#{username}.github.io/#{if isMainGithubIo() then '' else name}"
 
   github.authenticate
     type: 'basic'
