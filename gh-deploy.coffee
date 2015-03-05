@@ -42,4 +42,5 @@ module.exports = (name, username, password) ->
               if err
                 console.log "ERROR: Error creating file: #{errorToMessage err}"
               else
-                console.log "INFO: Repository created. Go to #{repoUrl()}"
+                console.log "INFO: Page created. You might need to refresh the page"
+                require('opn') repoUrl()
