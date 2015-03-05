@@ -6,6 +6,10 @@
 
   npm install -g gh-deploy
 
+## Demo
+
+See [this 20 second video](http://youtu.be/vJlg-0y2fTY) for a Hello World prentation.
+
 ## Usage
 
 ```
