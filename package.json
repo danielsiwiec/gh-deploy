@@ -19,7 +19,6 @@
   "dependencies": {
     "colors": "^1.0.3",
     "github": "^0.2.3",
-    "meow": "^3.1.0",
     "opn": "^1.0.1",
     "read": "^1.0.5"
   },
