@@ -1,7 +1,6 @@
-gh-deploy
-=========
+# gh-deploy
 
-A small library to deploy static pages to GitHub
+> A small library to deploy static pages to GitHub
 
 ## Installation
 
