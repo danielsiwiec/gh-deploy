@@ -1,6 +1,12 @@
 # gh-deploy
 
-> A small library to deploy static pages to GitHub
+> A small library to kick-start static pages, using GitHub Pages
+
+This module will:
+
+* Create a new repo, following GitHub Pages convention
+* Add a stub index.html
+* Clone the repo into the current folder, so it's ready for your modifications
 
 ## Installation
 
