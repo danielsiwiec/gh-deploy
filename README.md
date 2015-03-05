@@ -32,6 +32,9 @@ GitHub offers two options for page URLs:
 * http://*username*.github.io - use *username*.github.io as the **reponame**
 * http://*username*.github.io/*reponame* - use any other **reponame**
 
+## Credit
+Inspired by [microstatic](https://github.com/moredip/microstatic) and [awestruck](http://awestruct.org/)
+
 ## Release History
 
 * 0.1.0 Initial release
