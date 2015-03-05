@@ -13,7 +13,8 @@ module.exports = (name, username, password) ->
   toBase64 = (string) -> (new Buffer string).toString 'base64'
   errorToMessage = (error) -> JSON.parse(error.message).message
   isMainGithubIo = -> return name is "#{username}.github.io"
-  repoUrl = -> "https://#{username}.github.io/#{if isMainGithubIo() then '' else name}"
+  pageUrl = -> "https://#{username}.github.io/#{if isMainGithubIo() then '' else name}"
+  repoUrl = -> "git@github.com:#{username}/#{name}.git"
 
   github.authenticate
     type: 'basic'
@@ -44,5 +45,13 @@ module.exports = (name, username, password) ->
               if err
                 console.log "Error creating file: #{errorToMessage err}".red
               else
+
+                exec = require('child_process').exec
+
+                child = exec "git clone #{repoUrl()}" , (error, stdout, stderr) ->
+                  console.log stdout.toString()
+                  console.log 'stderr: ' + stderr.toString()
+                  console.log if error then "exec error: #{error}" else 'Repo cloned'.green
+
                 console.log "Page created. You might need to refresh the page".green
-                require('opn') repoUrl()
+                require('opn') pageUrl()
