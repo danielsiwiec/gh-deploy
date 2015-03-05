@@ -14,7 +14,10 @@ This module will:
 
 ## Demo
 
-See [this 20 second video](http://youtu.be/vJlg-0y2fTY) for a Hello World prentation.
+[Part I (19 seconds)](http://youtu.be/vJlg-0y2fTY) - Hello World
+
+[Part II (36 seconds)](http://youtu.be/5stwAqtgWTg) - Deploy Todo MVC
+
 
 ## Usage
 
