@@ -19,10 +19,9 @@ As a result you will:
 
 ## Demo
 
-[Part I (19 seconds)](http://youtu.be/vJlg-0y2fTY) - Hello World
+<a href="http://youtu.be/vJlg-0y2fTY" target="_blank">Part I - Hello World (19 seconds)</a>
 
-[Part II (36 seconds)](http://youtu.be/5stwAqtgWTg) - Deploy Todo MVC
-
+<a href="http://youtu.be/5stwAqtgWTg" target="_blank">Part II - Deploy Todo MVC (36 seconds)</a>
 
 ## Usage
 
