@@ -1,3 +1,5 @@
+require 'colors'
+
 module.exports = (name, username, password) ->
   GithubApi = require 'github'
 
@@ -23,13 +25,13 @@ module.exports = (name, username, password) ->
     repo: name
   , (err,res) ->
     if res
-      console.log "ERROR: Repository #{name} already exists. Pick a different reponame"
+      console.log "Repository #{name} already exists. Pick a different reponame".red
     else
       github.repos.create
         name: name
       , (err, res) ->
         if err
-          console.log "ERROR: Error creating repository: #{errorToMessage err}"
+          console.log "Error creating repository: #{errorToMessage err}".red
         else
           github.repos.createFile
             user: username
@@ -40,7 +42,7 @@ module.exports = (name, username, password) ->
             content: toBase64 content
           , (err, res) ->
               if err
-                console.log "ERROR: Error creating file: #{errorToMessage err}"
+                console.log "Error creating file: #{errorToMessage err}".red
               else
-                console.log "INFO: Page created. You might need to refresh the page"
+                console.log "Page created. You might need to refresh the page".green
                 require('opn') repoUrl()
