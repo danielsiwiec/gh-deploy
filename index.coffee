@@ -21,5 +21,6 @@ read
   , (err, password) ->
     read
       prompt: 'Page name:'
+      default: "#{username}.github.io"
     , (err, pageName) ->
       app pageName, username, password
