@@ -1,6 +1,6 @@
 {
   "name": "gh-deploy",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Gh-deploy",
   "homepage": "https://github.com/danielsiwiec/gh-deploy",
   "bugs": "https://github.com/danielsiwiec/gh-deploy/issues",
@@ -9,6 +9,12 @@
     "email": "daniel.siwiec@gmail.com",
     "url": "https://danielsiwiec.github.io"
   },
+  "keywords": [
+    "gh-pages",
+    "generate",
+    "github",
+    "html"
+  ],
   "bin": {
     "gh-deploy": "index.coffee"
   },
