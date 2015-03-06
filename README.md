@@ -50,3 +50,6 @@ Inspired by [microstatic](https://github.com/moredip/microstatic) and [awestruck
 ## Release History
 
 * 0.1.0 Initial release
+* 0.2.0
+    * Wizard-like interface
+    * Open the page when ready
