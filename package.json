@@ -1,7 +1,7 @@
 {
   "name": "gh-deploy",
   "version": "0.2.0",
-  "description": "Gh-deploy",
+  "description": "A one-liner to kick-start static pages, using GitHub Pages",
   "homepage": "https://github.com/danielsiwiec/gh-deploy",
   "bugs": "https://github.com/danielsiwiec/gh-deploy/issues",
   "author": {
