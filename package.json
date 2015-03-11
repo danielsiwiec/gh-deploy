@@ -39,6 +39,7 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "coffee-script": "^1.9.1",
     "mocha": "^2.2.1"
   }
 }
