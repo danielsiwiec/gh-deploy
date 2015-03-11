@@ -18,6 +18,9 @@
   "bin": {
     "gh-deploy": "index.coffee"
   },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/danielsiwiec/gh-deploy.git"
@@ -34,5 +37,8 @@
     "node": ">=0.10.0",
     "npm": ">=1.2.10"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^2.2.1"
+  }
 }
