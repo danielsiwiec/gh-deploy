@@ -1,4 +1,4 @@
-# gh-deploy
+# gh-deploy [![Build Status](https://travis-ci.org/danielsiwiec/gh-deploy.svg?branch=master)](https://travis-ci.org/danielsiwiec/gh-deploy)
 
 > A **one-liner** to kick-start static pages, using GitHub Pages
 
