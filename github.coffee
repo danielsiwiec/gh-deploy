@@ -14,6 +14,8 @@ module.exports = (reponame, username, password) ->
   isMainGithubIo = -> return reponame is "#{username}.github.io"
   repoUrl = -> "git@github.com:#{username}/#{reponame}.git"
 
+  branch = -> if isMainGithubIo username, reponame then 'master' else 'gh-pages'
+
   github.authenticate
       type: 'basic'
       username: username
@@ -37,7 +39,7 @@ module.exports = (reponame, username, password) ->
     github.repos.createFile
       user: username
       repo: reponame
-      branch: if isMainGithubIo username, reponame then 'master' else 'gh-pages'
+      branch: branch()
       path: 'index.html'
       message: 'Add index.html'
       content: toBase64 content
