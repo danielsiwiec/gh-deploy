@@ -7,20 +7,25 @@ console.log ['-------------------------------------------',
              ''].join '\n'
 
 app = require './gh-deploy'
+read = require 'read'
+q = require 'q'
 
-read = require('read')
+reader = q.denodeify read
 
-read
+username = ''
+password = ''
+
+reader
   prompt: 'GitHub username:'
-, (err, username) ->
-  read
-    prompt: 'GitHub password (not stored):'
-    silent: true
-    replace: '*'
-    edit: true
-  , (err, password) ->
-    read
-      prompt: 'Page name (defines page URL):'
-      default: "#{username}.github.io"
-    , (err, pageName) ->
-      app pageName, username, password
+.then (input) -> username = input[0]
+.then -> reader
+  prompt: 'GitHub password (not stored):'
+  silent: true
+  replace: '*'
+  edit: true
+.then (input) -> password = input[0]
+.then -> reader
+  prompt: 'Page name (defines page URL):'
+  default: "#{username}.github.io"
+.then (input) -> app input[0], username, password
+.done()
