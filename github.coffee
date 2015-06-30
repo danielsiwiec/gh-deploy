@@ -1,4 +1,5 @@
 GithubApi = require 'github'
+q = require 'q'
 
 github = new GithubApi
   version: '3.0.0'
@@ -30,21 +31,19 @@ module.exports = (reponame, username, password) ->
       repo: reponame
     , callback
 
-  createRepo: (callback) ->
-    github.repos.create
+  createRepo: ->
+    q.denodeify(github.repos.create)
       name: reponame
-    , callback
 
-  addIndexPage: (callback) ->
-    github.repos.createFile
+  addIndexPage: ->
+    q.denodeify(github.repos.createFile)
       user: username
       repo: reponame
       branch: branch()
       path: 'index.html'
       message: 'Add index.html'
       content: toBase64 content
-    , callback
 
-  clone: (callback) ->
+  clone: ->
     exec = require('child_process').exec
-    child = exec "git clone #{repoUrl()}", callback
+    q.denodeify(exec "git clone #{repoUrl()}")
